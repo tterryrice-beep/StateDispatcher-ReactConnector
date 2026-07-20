@@ -1,8 +1,8 @@
 {
   "name": "state-dispatcher-red-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
-  "description": "Type-safe React hook factory for state-dispatcher-red",
+  "description": "React hooks connector for fine-grained subscriptions with state-dispatcher-red",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

@@ -1,10 +1,14 @@
 # state-dispatcher-red-react
-[![npm version](https://img.shields.io/npm/v/state-dispatcher-red)](https://www.npmjs.com/package/state-dispatcher-red-react)
-React hooks connector for [`state-dispatcher-red`](https://www.npmjs.com/package/state-dispatcher-red).
+
+[![npm version](https://img.shields.io/npm/v/state-dispatcher-red-react)](https://www.npmjs.com/package/state-dispatcher-red-react)
+
+Type-safe React hooks connector for [`state-dispatcher-red`](https://www.npmjs.com/package/state-dispatcher-red).
 
 `state-dispatcher-red-react` provides a lightweight and type-safe way to build React hooks on top of `StateDispatcher`.
 
-The main purpose of this package is to create reusable **domain-specific React hooks** while keeping your components independent from dispatcher implementation details.
+The main purpose of this package is to create reusable **domain-specific React hooks** while keeping components independent from dispatcher implementation details.
+
+`StateDispatcher` uses explicit event subscriptions, allowing React components to react only to the changes they actually depend on instead of triggering unnecessary updates across unrelated parts of the application.
 
 ---
 
@@ -126,8 +130,8 @@ A common pattern is storing a dispatcher inside a provider.
 Example:
 
 ```ts
-export const useSnakeHook = () => {
-    const { manager } = useSnake();
+export const useGameHook = () => {
+    const { manager } = useGame();
 
     return createHook(manager);
 };
@@ -136,8 +140,8 @@ export const useSnakeHook = () => {
 Now create hooks around your domain:
 
 ```ts
-export const useSnakeActivity = () => {
-    const [activity] = useSnakeHook()(
+export const useGameActivity = () => {
+    const [activity] = useGameHook()(
         "activityChanged",
         state => state.main.activity,
     );
