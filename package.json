@@ -1,0 +1,43 @@
+{
+  "name": "state-dispatcher-red-react",
+  "version": "0.1.1",
+  "private": false,
+  "description": "Type-safe React hook factory for state-dispatcher-red",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "hooks",
+    "typescript",
+    "state-management",
+    "state-dispatcher",
+    "state-dispatcher-red",
+    "dispatcher"
+  ],
+  "author": "RED_TR",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tterryrice-beep/StateDispatcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tterryrice-beep/StateDispatcher/issues"
+  },
+  "homepage": "https://tterryrice-beep.github.io/facilitators-tr/modules/dispatcher",
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8"
+  },
+  "dependencies": {
+    "state-dispatcher-red": "^0.1.1"
+  }
+}
